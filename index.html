@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAT MEME ARENA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
+
+  <!-- 헤더 -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 border-b border-gray-200 shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <span class="font-black italic text-2xl bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-amber-500 cursor-pointer" onclick="location.reload()">
+        🐾 CAT MEME ARENA
+      </span>
+      <button id="btn-open-modal" class="bg-gray-900 text-white text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-black transition shadow-md flex items-center gap-2">
+        <i class="fa-solid fa-plus"></i> 새 밈 대결
+      </button>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐트 -->
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+    <div class="text-center space-y-2">
+      <span class="text-xs font-bold tracking-widest text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+        REALTIME CAT BATTLE
+      </span>
+      <h1 class="text-3xl md:text-4xl font-black text-gray-900">최고의 고양이 밈을 뽑아주세요!</h1>
+    </div>
+
+    <!-- 동적 배틀 목록이 그려질 영역 -->
+    <div id="battle-container" class="space-y-12">
+      <div class="text-center py-20 text-gray-400 font-bold">데이터를 불러오는 중입니다...</div>
+    </div>
+  </main>
+
+  <!-- 모달 연결 영역 -->
+  <div id="modal-container"></div>
+
+  <!-- 스크립트 연결 -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
